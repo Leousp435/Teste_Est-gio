@@ -34,7 +34,7 @@ except Error as e:
 
 #Tentaremos nos conectar com o banco de dados com o nome de despesasDB.
 try:
-    conn = msql.connect(host="localhost", database="despesasDB", user="root", password="mysql#123")
+    conn = msql.connect(host="localhost", database="despesasDB", user="root", password="sql#123")
 
     #Caso tenhamos conseguido:
     if conn.is_connected():
@@ -51,7 +51,7 @@ try:
         print("Table despesas is created")
 
         #Com a tabela criada inserimos os dados do dataframe despesas nela.
-        engine = create_engine("mysql+pymysql://{user}:{password}@localhost/{database}".format(user="root", password="mysql#123", database="despesasDB"))
+        engine = create_engine("mysql+pymysql://{user}:{password}@localhost/{database}".format(user="root", password="sql#123", database="despesasDB"))
         print("Inserting data into table despesas...")
         despesas.to_sql("despesas", con = engine, if_exists = "replace", index=False)
         print("Data inserted.")
