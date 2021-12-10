@@ -30,7 +30,7 @@ Pelo terminal vá para a pasta banco_de_dados/
 
 Abra o arquivo database.py com um editor de texto
 
-Nas linhas 23, 37 e 54 coloque a senha do seu usuario root do banco de dados no campo password, no lugar de "sql#123" e salve as modificações.
+Nas linhas 23, 37 e 54 coloque a senha do banco de dados nos campos password, no lugar de "sql#123" (se o usuário do banco de dados não for o root, coloque também o usuario correto nos campos user no lugar de "root") e salve as modificações.
 
 Digite o comando "source bin/activate" para ativar o ambiente virtual para o python
 
