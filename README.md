@@ -13,18 +13,15 @@ O objetivo era buscar a versão mais recente do Padrão TISS e baixar o componen
 
 Pelo terminal, vá para a pasta web_scrapping/:
 
-```$ cd web_scraping/
-```
+```$ cd web_scraping/```
 
 Ative o ambiente virtual para o python:
 
-```$ source bin/activate
-```
+```$ source bin/activate```
 
 Execute o programa:
 
-```$ python web_scraping.py
-```
+```$ python web_scraping.py```
 
 Desative o ambiente virtual do python:
 
@@ -43,18 +40,15 @@ O objetivo era extrair do pdf do teste 1 acima os dados dos Quadros 30,31,32 (Ta
 
 Pelo terminal vá para a pasta data_transformation/:
 
-```$ cd data_transformation/
-```
+```$ cd data_transformation/```
 
 Ative o ambiente virtual para o python:
 
-```$ source bin/activate
-```
+```$ source bin/activate```
 
 Execute o programa :
 
-```$ python data_transformation.py
-```
+```$ python data_transformation.py```
 
 Desative o ambiente virtual do python:
 
@@ -74,20 +68,17 @@ O objetivo era criar as queries para carregar o conteúdo dos arquivos obtidos n
 
 Pelo terminal vá para a pasta banco_de_dados/:
 
-```$ cd banco_de_dados/
-```
+```$ cd banco_de_dados/```
 
 Abra o arquivo database.py com um editor de texto e na linha 10 coloque a senha do banco de dados no campo senha, no lugar de "sql#123" (se o usuário do banco de dados não for o root, coloque também o usuario correto no campo usuario no lugar de "root") e salve as modificações.
 
 Ative o ambiente virtual para o python:
 
-```$ source bin/activate
-```
+```$ source bin/activate```
 
 Execute o programa :
 
-```$ python database.py
-```
+```$ python database.py```
 
 Desative o ambiente virtual do python:
 
