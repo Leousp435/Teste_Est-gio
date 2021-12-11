@@ -1,39 +1,97 @@
-# Teste_Estagio
+# Teste de Estagio - Intuitive Care
 
 Nome: Leonardo Gabriel Fusineli Silva
 
-Repositório com os códigos dos testes de nivelamento.
+Repositório com os códigos dos testes de nivelamento relativos ao processo seletivo de estágio da empresa Intuitive Care.
 
-# Como rodar o Teste Web Scraping:
+# 1. Web Scraping:
 
-Pelo terminal vá para a pasta web_scrapping/
+## Objetivo
+O objetivo era buscar a versão mais recente do Padrão TISS e baixar o componente organizacional.
 
-Digite o comando "source bin/activate" para ativar o ambiente virtual para o python
+## Como executar
 
-Depois rode o programa com o comando "python web_scraping.py"
+Pelo terminal, vá para a pasta web_scrapping/:
 
-Digite "deactivate" para desativar o ambiente virtual do python
+```$ cd web_scraping/
+```
 
-# Como rodar o Teste Transformação de Dados
+Ative o ambiente virtual para o python:
 
-Pelo terminal vá para a pasta data_transformation/
+```$ source bin/activate
+```
 
-Digite o comando "source bin/activate" para ativar o ambiente virtual para o python
+Execute o programa:
 
-Depois rode o programa com o comando "python data_transformation.py"
+```$ python web_scraping.py
+```
 
-Digite "deactivate" para desativar o ambiente virtual do python
+Desative o ambiente virtual do python:
 
-# Como rodar o teste de Banco de Dados MySQL
+```$ deactivate```
 
-Pelo terminal vá para a pasta banco_de_dados/
+## Saída
+O arquivo pdf do Padrão TISS será baixado na pasta atual.
 
-Abra o arquivo database.py com um editor de texto
 
-Nas linhas 23, 37 e 54 coloque a senha do banco de dados nos campos password, no lugar de "sql#123" (se o usuário do banco de dados não for o root, coloque também o usuario correto nos campos user no lugar de "root") e salve as modificações.
+# 2. Transformação de Dados
 
-Digite o comando "source bin/activate" para ativar o ambiente virtual para o python
+## Objetivo
+O objetivo era extrair do pdf do teste 1 acima os dados dos Quadros 30,31,32 (Tabela de categoria do Padrão TISS), salvar os dados em tabelas estruturadas, em csvs e zipar todos os csvs num arquivo "Teste_{seu_nome}.zip".
 
-Depois rode o programa com o comando "python database.py"
+## Como executar
 
-Digite "deactivate" para desativar o ambiente virtual do python
+Pelo terminal vá para a pasta data_transformation/:
+
+```$ cd data_transformation/
+```
+
+Ative o ambiente virtual para o python:
+
+```$ source bin/activate
+```
+
+Execute o programa :
+
+```$ python data_transformation.py
+```
+
+Desative o ambiente virtual do python:
+
+```$ deactivate```
+
+## Saída
+O arquivo zip será criado na pasta atual.
+
+# 3. Banco de Dados MySQL
+
+## Objetivo
+O objetivo era criar as queries para carregar o conteúdo dos arquivos obtidos nas tarefas de preparação num banco MySQL ou Postgres e montar uma query analítica que traga a resposta para as seguintes perguntas:
+
+"Quais as 10 operadoras que mais tiveram despesas com 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' no último trimestre?" e "Quais as 10 operadoras que mais tiveram despesas com 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' no último ano?"
+
+## Como executar
+
+Pelo terminal vá para a pasta banco_de_dados/:
+
+```$ cd banco_de_dados/
+```
+
+Abra o arquivo database.py com um editor de texto e na linha 10 coloque a senha do banco de dados no campo senha, no lugar de "sql#123" (se o usuário do banco de dados não for o root, coloque também o usuario correto no campo usuario no lugar de "root") e salve as modificações.
+
+Ative o ambiente virtual para o python:
+
+```$ source bin/activate
+```
+
+Execute o programa :
+
+```$ python database.py
+```
+
+Desative o ambiente virtual do python:
+
+```$ deactivate```
+
+## Saída
+O programa imprimirá na tela as respostas das duas perguntas feitas.

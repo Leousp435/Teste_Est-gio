@@ -1,4 +1,4 @@
-#Importa as bibliotecas necessárias para o Web_Scrapping
+#Importa as bibliotecas necessárias para o Web_Scraping
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -27,3 +27,5 @@ file_name = file_link.split("/")[-1]
 file = open(file_name, "wb")
 file.write(file_content)
 file.close()
+
+print("[Web_Scraping] Arquivo", file_name, "baixado.")
