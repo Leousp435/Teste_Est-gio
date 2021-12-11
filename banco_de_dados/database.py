@@ -73,8 +73,10 @@ try:
         print()
         print("As 10 operadoras que mais tiveram despesas com 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' no último trimestre em ordem decrescente foram:")
         #Imprimimos o Registro ANS das 10 operadoras que mais tiveram despesas com a descrição requisitada em ordem decrescente.
+        j = 1
         for i in result[:10]:
-            print("Operadora com registro ANS: "+str(i[0]).zfill(6))
+            print(str(j)+". Operadora com registro ANS: "+str(i[0]).zfill(6))
+            j = j+1
             
         #Query SQL para obtermos uma lista dos registros ANS das operadoras que mais tiveram despesas com 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' no último ano.
         sql = "SELECT REG_ANS, ROUND(SUM(VL_SALDO_FINAL),2) tot FROM despesas WHERE STR_TO_DATE(DATA, '%d/%m/%Y') >= '2021-01-01' AND DESCRICAO ='EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR ' GROUP BY REG_ANS, DESCRICAO ORDER BY tot DESC;"
@@ -87,8 +89,10 @@ try:
         print()
         print("As 10 operadoras que mais tiveram despesas com 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR' no último ano em ordem decrescente foram:")
         #Imprimimos o Registro ANS das 10 operadoras que mais tiveram despesas com a descrição requisitada em ordem decrescente.
+        j = 1
         for i in result[:10]:
-            print("Operadora com registro ANS: "+str(i[0]).zfill(6))
+            print(str(j)+". Operadora com registro ANS: "+str(i[0]).zfill(6))
+            j = j + 1
 
         print()
 
